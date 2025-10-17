@@ -3,7 +3,6 @@ import json
 import boto3
 import random
 import datetime
-import pytz
 
 class Sensor:
     def __init__(self, name, lat, lon, interval_ms):
@@ -19,7 +18,7 @@ class Sensor:
             "value": value,
             "latitude": self.lat,
             "longitude": self.lon,
-            "timestamp": datetime.datetime.now(pytz.timezone("Europe/Kyiv")).isoformat()
+            "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
         }
 
 async def send_data(sensor, queue_url, sqs_client):
