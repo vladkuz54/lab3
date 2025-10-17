@@ -1,0 +1,10 @@
+{
+  "queue_url": "https://sqs.eu-north-1.amazonaws.com/279791963662/lab3",
+  "aws_region": "eu-north-1",
+  "sensors": {
+    "temperature": {"interval_ms": 40},
+    "humidity": {"interval_ms": 60},
+    "light": {"interval_ms": 100}
+  },
+  "location": {"latitude": 49.84, "longitude": 24.03}
+}
