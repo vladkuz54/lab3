@@ -9,7 +9,7 @@ class Sensor:
         self.name = name
         self.lat = lat
         self.lon = lon
-        self.interval = interval_ms / 1000.0  # у секундах
+        self.interval = interval_ms / 1000.0  
 
     def generate_data(self):
         value = round(random.uniform(10, 100), 2)
