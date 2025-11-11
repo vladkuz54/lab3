@@ -39,9 +39,9 @@ async def main():
     lat, lon = config["location"]["latitude"], config["location"]["longitude"]
 
     sensors = [
-        Sensor("temperature", lat, lon, config["sensors"]["temperature"]["interval_ms"]),
-        Sensor("humidity", lat, lon, config["sensors"]["humidity"]["interval_ms"]),
-        Sensor("light", lat, lon, config["sensors"]["light"]["interval_ms"])
+        Sensor(config['sensors']['temperature'], lat, lon, config["sensors"]["temperature"]["interval_ms"]),
+        Sensor(config['sensors']['humidity'], lat, lon, config["sensors"]["humidity"]["interval_ms"]),
+        Sensor(config['sensors']['light'], lat, lon, config["sensors"]["light"]["interval_ms"])
     ]
 
     tasks = [asyncio.create_task(send_data(s, config["queue_url"], sqs)) for s in sensors]
