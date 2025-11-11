@@ -1,5 +1,5 @@
 {
-  "queue_url": "https://sqs.eu-north-1.amazonaws.com/279791963662/lab3",
+  "queue_url": "",
   "aws_region": "eu-north-1",
   "sensors": {
     "1": {"name": "temperature", "interval_ms": 40},
